@@ -22,9 +22,17 @@ cd zfjwtapi
 
 ## Usage
 
-```sh
-php -S localhost:8080 -t public/ public/index.php
+It is needed to be incremented inside the application configuration the following structure, to provide to the AuthController the needed JWT key:
+
+```php
+return [
+    'auth' => [
+        'key' => '[YOUR_KEY]'
+    ]
+];
 ```
+
+This array can be implemented inside a config/autoload/local.php and not versioned, or inside another Zend Framework compatible config file.
 
 ## Test
 
