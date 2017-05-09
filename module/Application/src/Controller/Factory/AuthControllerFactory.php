@@ -10,6 +10,7 @@ namespace Application\Controller\Factory;
 
 
 use Application\Controller\AuthController;
+use Application\Model\UserTable;
 use Interop\Container\ContainerInterface;
 use Interop\Container\Exception\ContainerException;
 use Zend\ServiceManager\Exception\ServiceNotCreatedException;
@@ -33,6 +34,11 @@ class AuthControllerFactory implements FactoryInterface
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        return new AuthController();
+        $key = $container->get('Config')['auth']['key'];
+
+        return new AuthController(
+            new UserTable(),
+            $key
+        );
     }
 }
