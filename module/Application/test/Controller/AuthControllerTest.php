@@ -14,16 +14,6 @@ class AuthControllerTest extends AbstractHttpControllerTestCase
 {
     const URL = "/auth";
 
-//    /**
-//     * @var Client
-//     */
-//    private $client;
-//
-//    /**
-//     * @var Request
-//     */
-//    private $request;
-
     public function setUp()
     {
         $this->setApplicationConfig(
@@ -31,10 +21,6 @@ class AuthControllerTest extends AbstractHttpControllerTestCase
         );
 
         parent::setUp();
-
-//        $this->client = new Client();
-//        $this->request = new Request();
-//        $this->request->setUri(self::BASE_URL."/auth");
     }
 
     public function testIfGetIsNotAllowed()
@@ -58,8 +44,7 @@ class AuthControllerTest extends AbstractHttpControllerTestCase
     public function testIfNonExistentUserIsNotAllowed()
     {
         $this->getRequest()->setMethod("POST")->setContent(json_encode([
-            "username" => "nonexistent",
-            "password" => "nonexistent"
+            "username" => "nonexistent"
         ]));
 
         $this->dispatch(self::URL);
@@ -68,24 +53,10 @@ class AuthControllerTest extends AbstractHttpControllerTestCase
         $this->assertEquals(403, $response->getStatusCode());
     }
 
-    public function testIfWrongPasswordIsNotAllowed()
+    public function testIfExistingUserIsAllowed()
     {
         $this->getRequest()->setMethod("POST")->setContent(json_encode([
-            "username" => "jose",
-            "password" => "nonexistent"
-        ]));
-
-        $this->dispatch(self::URL);
-        $response = $this->getResponse();
-
-        $this->assertEquals(403, $response->getStatusCode());
-    }
-
-    public function testIfCorrectCredentialsIsAllowed()
-    {
-        $this->getRequest()->setMethod("POST")->setContent(json_encode([
-            "username" => "jose",
-            "password" => "jose"
+            "username" => "jose"
         ]));
 
         $this->dispatch(self::URL);

@@ -55,7 +55,7 @@ class AuthController extends AbstractActionController
 
         $body = json_decode($request->getContent());
 
-        if (empty($body->username) || empty($body->password)) {
+        if (empty($body->username)) {
             $response = $this->getResponse();
             $response->setStatusCode(400);
 
@@ -63,9 +63,8 @@ class AuthController extends AbstractActionController
         }
 
 
-        $existentUser = $this->userTable->getByUsernameAndPassword(
-            $body->username,
-            $body->password
+        $existentUser = $this->userTable->getByUsername(
+            $body->username
         );
 
         if (!$existentUser) {

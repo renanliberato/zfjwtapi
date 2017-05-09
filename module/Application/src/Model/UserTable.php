@@ -26,25 +26,23 @@ class UserTable
     public function __construct()
     {
         $this->userList = [
-            new User(1, "jose", "jose"),
-            new User(1, "jose2", "jose2"),
-            new User(1, "jose2", "jose2")
+            new User(1, "jose"),
+            new User(2, "jose2"),
+            new User(3, "jose2")
         ];
     }
 
     /**
-     * Try to find a user inside the list with the username and passwords given.
+     * Try to find a user inside the list with the username given.
      *
      * @param $username
-     * @param $password
      *
      * @return User|null
      */
-    public function getByUsernameAndPassword($username, $password)
+    public function getByUsername($username)
     {
         foreach ($this->userList as $user) {
-            if ($user->getUsername() == $username &&
-                $user->getPassword() == $password) {
+            if ($user->getUsername() == $username) {
                 return $user;
             }
         }

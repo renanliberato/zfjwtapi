@@ -1,10 +1,10 @@
-# Zend Framework JWT API
+# Zend Framework 2 JWT API
 
 An example project showing a JWT Auth simple usage.
 
 # Disclaimer
 
-This project doesn't focus on providing a user storage or a secure password managing, actually it focus in providing a example of JWT token encoding, decoding and refreshing (in development).
+This project doesn't focus on providing a user storage, actually it focus in providing a example of JWT token encoding, decoding and refreshing (in development) using Zend Framework 2.
 
 ## Table of Contents
 
