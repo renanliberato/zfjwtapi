@@ -2,21 +2,21 @@
 /**
  * Created by IntelliJ IDEA.
  * User: renan
- * Date: 12/12/2016
- * Time: 7:13 PM
+ * Date: 9/5/2017
+ * Time: 4:22 PM
  */
 
 namespace Application\Controller\Factory;
 
 
-use Application\Controller\IndexController;
+use Application\Controller\AuthController;
 use Interop\Container\ContainerInterface;
 use Interop\Container\Exception\ContainerException;
 use Zend\ServiceManager\Exception\ServiceNotCreatedException;
 use Zend\ServiceManager\Exception\ServiceNotFoundException;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
-class IndexControllerFactory implements FactoryInterface
+class AuthControllerFactory implements FactoryInterface
 {
 
     /**
@@ -33,6 +33,6 @@ class IndexControllerFactory implements FactoryInterface
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        return new IndexController();
+        return new AuthController();
     }
 }

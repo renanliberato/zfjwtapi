@@ -8,18 +8,17 @@
 namespace Application;
 
 use Zend\Router\Http\Literal;
-use Zend\Router\Http\Segment;
 
 return [
     'router' => [
         'routes' => [
-            'home' => [
+            'auth' => [
                 'type' => Literal::class,
                 'options' => [
-                    'route'    => '/',
+                    'route'    => '/auth',
                     'defaults' => [
-                        'controller' => Controller\IndexController::class,
-                        'action'     => 'index',
+                        'controller' => Controller\AuthController::class,
+                        'action'     => 'post',
                     ],
                 ],
             ],
@@ -27,7 +26,7 @@ return [
     ],
     'controllers' => [
         'factories' => [
-            Controller\IndexController::class => Controller\Factory\IndexControllerFactory::class,
+            Controller\AuthController::class => Controller\Factory\AuthControllerFactory::class,
         ],
     ],
     'view_manager' => [
