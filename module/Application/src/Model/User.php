@@ -8,7 +8,11 @@
 
 namespace Application\Model;
 
-
+/**
+ * Class User
+ *
+ * @package Application\Model
+ */
 class User
 {
 
@@ -30,7 +34,6 @@ class User
         $this->username = $username;
         $this->password = $password;
     }
-
 
     /**
      * @return mixed

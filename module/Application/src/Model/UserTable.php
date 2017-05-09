@@ -8,6 +8,11 @@
 
 namespace Application\Model;
 
+/**
+ * Class UserTable
+ *
+ * @package Application\Model
+ */
 class UserTable
 {
     /**
@@ -15,18 +20,26 @@ class UserTable
      */
     private $userList;
 
+    /**
+     * Example list initialization
+     */
     public function __construct()
     {
         $this->userList = [
-            new User(1, "jose", "jose")
+            new User(1, "jose", "jose"),
+            new User(1, "jose2", "jose2"),
+            new User(1, "jose2", "jose2")
         ];
     }
 
-    public function fetchAll()
-    {
-        return $this->userList;
-    }
-
+    /**
+     * Try to find a user inside the list with the username and passwords given.
+     *
+     * @param $username
+     * @param $password
+     *
+     * @return User|null
+     */
     public function getByUsernameAndPassword($username, $password)
     {
         foreach ($this->userList as $user) {
