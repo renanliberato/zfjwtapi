@@ -69,7 +69,7 @@ class AuthController extends AbstractActionController
 
         if (!$existentUser) {
             $response = $this->getResponse();
-            $response->setSTatusCode(403);
+            $response->setStatusCode(403);
 
             return $response;
         }
