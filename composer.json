@@ -1,6 +1,6 @@
 {
     "name": "renanliberato/zfjwtapi",
-    "description": "Zend Framework JWT Authentication API implementation",
+    "description": "Zend Framework 3 JWT Authentication API implementation",
     "type": "project",
     "license": "",
     "keywords": [

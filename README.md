@@ -1,10 +1,10 @@
-# Zend Framework 2 JWT API
+# Zend Framework 3 JWT API
 
 An example project showing a JWT Auth simple usage.
 
 # Disclaimer
 
-This project doesn't focus on providing a user storage, actually it focus in providing a example of JWT token encoding, decoding and refreshing (in development) using Zend Framework 2.
+This project doesn't focus on providing a user storage, actually it focus in providing a example of JWT token encoding, decoding and refreshing (in development) using Zend Framework 3.
 
 ## Table of Contents
 
@@ -32,7 +32,7 @@ return [
 ];
 ```
 
-This array can be implemented inside a config/autoload/local.php and not versioned, or inside another Zend Framework compatible config file.
+This array can be implemented inside a config/autoload/local.php and not versioned, or inside another Zend Framework 3 compatible config file.
 
 ## Test
 
