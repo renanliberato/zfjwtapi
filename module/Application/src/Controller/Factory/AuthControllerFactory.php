@@ -8,7 +8,6 @@
 
 namespace Application\Controller\Factory;
 
-
 use Application\Controller\AuthController;
 use Application\Model\UserTable;
 use Interop\Container\ContainerInterface;

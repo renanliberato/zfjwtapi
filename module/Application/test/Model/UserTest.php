@@ -8,7 +8,6 @@
 
 namespace ApplicationTest\Model;
 
-
 use Application\Model\User;
 use PHPUnit\Framework\TestCase;
 
@@ -20,9 +19,9 @@ class UserTest extends TestCase
     private $user;
 
     public function setUp()
-{
-    $this->user = new User();
-}
+    {
+        $this->user = new User();
+    }
 
     public function testClassHasAllAttributes()
     {
@@ -57,5 +56,4 @@ class UserTest extends TestCase
         $this->assertEquals($id, $this->user->getId());
         $this->assertEquals($username, $this->user->getUsername());
     }
-
 }

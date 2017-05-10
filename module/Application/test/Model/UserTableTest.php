@@ -8,7 +8,6 @@
 
 namespace ApplicationTest\Model;
 
-
 use Application\Model\UserTable;
 use PHPUnit\Framework\TestCase;
 

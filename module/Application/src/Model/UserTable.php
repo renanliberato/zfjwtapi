@@ -61,5 +61,4 @@ class UserTable
     {
         return $this->userList;
     }
-
 }

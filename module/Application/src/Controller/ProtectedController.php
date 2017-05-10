@@ -8,7 +8,6 @@
 
 namespace Application\Controller;
 
-
 use Zend\View\Model\JsonModel;
 
 class ProtectedController extends AbstractProtectedController

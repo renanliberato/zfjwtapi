@@ -8,7 +8,6 @@
 
 namespace Application\Controller\Factory;
 
-
 use Application\Controller\ProtectedController;
 use Interop\Container\ContainerInterface;
 use Interop\Container\Exception\ContainerException;

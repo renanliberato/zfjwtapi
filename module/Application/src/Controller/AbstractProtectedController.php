@@ -8,7 +8,6 @@
 
 namespace Application\Controller;
 
-
 use Exception;
 use Firebase\JWT\JWT;
 use Zend\Mvc\Controller\AbstractActionController;
@@ -44,9 +43,8 @@ class AbstractProtectedController extends AbstractActionController
             JWT::decode($token, $key, ['HS256']);
 
             return parent::onDispatch($e);
-
         } catch (Exception $exception) {
-            $e->getResponse()->setStatusCode(401);
+            $response = $e->getResponse()->setStatusCode(401);
 
             return $response;
         }

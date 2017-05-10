@@ -8,7 +8,6 @@
 
 namespace Application\Controller;
 
-
 use Application\Model\UserTable;
 use Firebase\JWT\JWT;
 use Zend\Mvc\Controller\AbstractActionController;

@@ -8,7 +8,6 @@
 
 namespace ApplicationTest\Controller;
 
-
 use Firebase\JWT\JWT;
 use Zend\Http\Header\Authorization;
 use Zend\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
@@ -97,5 +96,4 @@ class ProtectedControllerTest extends AbstractHttpControllerTestCase
     {
         return $this->getApplication()->getServiceManager()->get('Config')['auth']['key'];
     }
-
 }
