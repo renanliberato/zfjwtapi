@@ -39,8 +39,12 @@ class UserTable
      *
      * @return User|null
      */
-    public function getByUsername($username)
+    public function getByUsername($username = null)
     {
+        if ($username == null) {
+            return null;
+        }
+
         foreach ($this->userList as $user) {
             if ($user->getUsername() == $username) {
                 return $user;
@@ -48,6 +52,14 @@ class UserTable
         }
 
         return null;
+    }
+
+    /**
+     * @return User[]
+     */
+    public function getUserList()
+    {
+        return $this->userList;
     }
 
 }
