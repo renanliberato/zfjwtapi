@@ -12,23 +12,5 @@
  */
 
 return [
-    'db' => [
-        'adapters' => [
-            'libraryAdapter' => [
-                'driver'         => 'Pdo',
-                'dsn'            => 'mysql:dbname=jwtauth;host=localhost',
-                'driver_options' => [
-                    \PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
-                ],
-            ],
-        ]
-    ],
-    'service_manager' => [
-        'factories' => [
-            \Zend\Db\Adapter\Adapter::class => \Zend\Db\Adapter\AdapterServiceFactory::class,
-        ],
-        'abstract_factories' => [
-            \Zend\Db\Adapter\AdapterAbstractServiceFactory::class
-        ],
-    ],
+    
 ];

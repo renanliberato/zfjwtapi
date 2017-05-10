@@ -16,11 +16,7 @@ return [
     'Zend\Mvc\Plugin\FlashMessenger',
     'Zend\Mvc\Plugin\FilePrg',
     'Zend\Mvc\I18n',
-    'Zend\Mvc\Console',
     'Zend\Log',
-    'Zend\Form',
-    'Zend\Db',
     'Zend\Router',
-    'Zend\Validator',
     'Application'
 ];
