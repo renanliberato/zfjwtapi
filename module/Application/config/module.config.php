@@ -7,7 +7,9 @@
 
 namespace Application;
 
+use Application\Model\UserTable;
 use Zend\Router\Http\Literal;
+use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
     'router' => [
@@ -34,4 +36,9 @@ return [
             'ViewJsonStrategy',
         ),
     ],
+    'service_manager' => [
+        'factories' => [
+            UserTable::class => InvokableFactory::class
+        ]
+    ]
 ];
